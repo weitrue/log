@@ -28,6 +28,7 @@ Fixed(msg string, fields ...Field)
 ## 使用示例
 
 使用全局logger对象
+
 ```go
 import "github.com/weitrue/log"
 // 记录日志
