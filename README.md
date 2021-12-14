@@ -261,8 +261,7 @@ wh,err :=flumefilewriter.NewWriteHandle(
 | req       | string | 是    | text  | 请求内容          | {"traceid": "673c6222b00b4e148f58de86f50e198c", "ver": 1.3,"ip": "192.168.5.51"} |
 | res       | string | 是    | 无长度限制 | 响应内容          |                                          |
 | proc_time | int    | 是    | int32 | 处理时间（单位毫秒）    | 60                                       |
-| server_id | int    | 是    | int32 | 区服标识          | 100                                      |
-| role_id   | string | 是    | 32    | 角色标识          | iW53j3LbHjKvmkeeciSbcn                   |
+| user_id   | string | 是    | 32    | 角色标识          | iW53j3LbHjKvmkeeciSbcn                   |
 | cp_app_id | int    | 是    | int32 | 内容提供商应用标识     | 1014                                     |
 | log_time  | string  | 是   | 无长度限制  | 日志产生时间(转换为东八区时间进行存储，服务端自行转换) |"2019-01-01 00:00:00"  |
 | reserve   | string | 是    | 无长度限制 | 保留字段      |          ""                                |
@@ -271,13 +270,12 @@ wh,err :=flumefilewriter.NewWriteHandle(
 
 | 字段名        | 类型     | 是否必填 | 最大长度  | 描述            | 示例值                    |
 | ---------- | ------ | ---- | ----- | ------------- | ---------------------- |
-| field_name | string | 是    | 32    | 重要数值字段名称（亚瑟王：包含资源（兵、粮食等）变化、元宝变化、角色等级、道具变化、活动积分变化等）      | RoleExp                |
+| field_name | string | 是    | 32    | 重要数值字段名称（积分变化等）| RoleExp                |
 | old_val    | int    | 是    | int64 | 原始值           | 200                    |
 | new_val    | int    | 是    | int64 | 目标值           | 300                    |
 | scene      | string | 是    | 32    | 数值变化场景        | 11403                  |
 | remark     | string | 是    | 无长度限制 | 备注            | 领取成就奖励                 |
-| server_id  | int    | 是    | int32 | 区服标识          | 100                    |
-| role_id    | string | 是    | 32    | 角色标识          | iW53j3LbHjKvmkeeciSbcn |
+| user_id    | string | 是    | 32    | 角色标识          | iW53j3LbHjKvmkeeciSbcn |
 | cp_app_id  | int    | 是    | int32 | 内容提供商应用标识     | 1014                   |
 | log_time  | string  | 是    |   无长度限制  | 日志产生时间(转换为东八区时间进行存储，服务端自行转换) |"2019-01-01 00:00:00"  |
 | reserve    | string | 是    | 无长度限制 | 保留字段      |        ""                |
