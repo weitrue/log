@@ -1,0 +1,10 @@
+# include 参考：https://docs.gitlab.com/ee/ci/yaml/#includefile
+
+image: golang:1.15
+
+# pipeline 编排，覆盖默认CI脚本中的设置
+stages:
+  - Lint # 1.Lint代码检查
+  - Test # 2.执行单元测试 并输出测试覆盖率
+  - CyclomaticComplexity # 3.圈复杂度检查
+  - ResultParse # 4. 代码扫描结果分析
